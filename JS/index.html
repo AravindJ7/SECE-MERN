@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="msg">Hello world</p>
+    <p class="item">One</p>
+    <p class="item">Two</p> -->
+    <!-- <button id="submit" onclick="submitted()">CLick me</button> -->
+
+    <!-- <p id="title">Hello World!</p>
+    <button id="toggle" onclick="toggle()">Toggle</button>
+     <script>
+        var toggle = ()=>{
+            // const data = document.getElementById('title').value;
+                var value = document.getElementById('title');
+                var result = value.innerText==="Hello World!"?"Hello Aravind!":"Hello World!";
+                value.innerText=result;
+        }
+     </script> -->
+     <button id="toggle" onclick="toggle()" ><b>Toggle</b></button>
+     <p id="c" style="color:chartreuse"></p>
+     <p id="col"></p>
+     <script>
+        count = 0;
+        var toggle = ()=>{
+            count++;
+            var color = ['red','green','orange','yellow','white','beige'];
+            var index = Math.floor(count%color.length);
+            document.querySelector('body').style.backgroundColor=color[index];
+            document.getElementById('col').innerText=color[index];
+            document.getElementById('c').innerText=count;
+        }
+     </script>
+
+    <!-- <p id="name"></p>
+    <input type="text" id="inp" placeholder="Enter your Name">
+    <button id="submit">submit!!!</button> -->
+    <!-- <p id="value">1</p>
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+    <button id="res">Reset</button> -->
+    <!-- <h1>Rock Paper Scissor</h1>
+    <button onclick="getResult('rock')">Rock</button>
+    <button onclick="getResult('paper')">Paper</button>
+    <button onclick="getResult('scissor')">Scissor</button>
+    <p id="result"></p>
+    <script>
+        const getResult = (choice)=>{
+            var c = ['rock','paper','scissor'];
+            var computerchoice = c[Math.floor(Math.random()*3)];
+            console.log(computerchoice)
+            result = ""
+            if(choice==computerchoice)result = "Draw"
+            else if((choice=='rock' && computerchoice=='paper') || choice=='scissor' && computerchoice=='rock'){
+                result = "loss";
+            }else{
+                result = "winnn!!"
+            }
+            document.getElementById("result").innerText=result;
+        }
+    </script> -->
+
+    <!-- <form id="form">
+        <p id="Name">Name:</p>
+        <input id="name" type="text" placeholder="Enter your name:">
+        <p id="Age">Age:</p>
+        <input id="age" type="number" placeholder="Enter your Age">
+        <p id="Address">Address:</p>
+        <input id="Address" type="text" placeholder="Enter your Address">
+    </form>
+      -->
+
+
+    <!-- <form id="Form">
+        <label for="name">Name :</label>
+        <input type="text" id="name" placeholder="Enter your Name">
+        <label for="email">Email :</label>
+        <input type="text" id="email" placeholder="Enter your Email">
+        <label for="Address">Address :</label>
+        <input type="text" id="address" placeholder="Enter your Address">
+        <button type="submit" id="btn">Submit</button>
+    </form>
+
+  <script>
+    document.getElementById('Form').addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const address = document.getElementById('address').value;
+        document.write(`Name : ${name}`);
+        document.write(`email : ${email}` );
+
+        document.write(`Address : ${address}`);
+        alert("form submitted")
+    document.getElementById('Form').remove();    })
+  </script>
+   -->
+
+    <!-- <script>
+        count=0;
+        document.getElementById('inc').addEventListener('click',()=>{
+            count+=1;
+            var val = document.getElementById('value').value;
+            document.getElementById('value').innerText = count;
+        })
+        document.getElementById('dec').addEventListener('click',()=>{
+            count-=1;
+            var val = document.getElementById('value').value;
+            document.getElementById('value').innerText = count;
+        })
+        document.getElementById('res').addEventListener('click',()=>{
+            count=0
+            var val = document.getElementById('value').value;
+            document.getElementById('value').innerText = count;
+        })
+        // document.getElementById('submit').addEventListener('click',()=>{
+        //     var text = document.getElementById('inp').value;
+        //     document.getElementById('name').innerText=text;
+        // })
+
+        function submitted(){
+            document.write("Submitted the button")
+            alert("Button Clicked")
+        }
+        document.getElementById('msg').style.color="Red"
+        var items = document.getElementsByClassName('item')
+        items[0].style.color="Green"
+        items[1].style.color="Red"
+
+        // document.querySelector('.class')
+        // document.querySelector('#id')
+        // document.querySelector('tag')
+        document.querySelector('#msg').style.backgroundColor="blue"
+        document.getElementById('msg').innerText="Helll"
+    </script> -->
+</body>
+</html>
